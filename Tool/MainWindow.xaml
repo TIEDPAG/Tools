@@ -1,0 +1,21 @@
+﻿<Window x:Class="Tool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tool"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="7*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Label Name="lab_Desc" HorizontalAlignment="Right">描述</Label>
+        <TextBox Name="txt_Desc" Grid.Column="1" KeyDown="txt_Desc_KeyDown"></TextBox>
+    </Grid>
+</Window>

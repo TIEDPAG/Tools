@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.15
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tool", "Tool\Tool.csproj", "{76E5A027-A6FA-413E-9BF2-65CD87C3B2A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlTool", "SqlTool\SqlTool.csproj", "{D70638FB-0C4D-40B2-AE47-D6BFBC191354}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisTool", "RedisTool\RedisTool.csproj", "{0A943F98-A469-4752-99CB-CECC0A3D4AE2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Helper", "Helper", "{E7420BF1-C734-4DA3-AE8D-8B2D5F78F4B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helper", "Helper\Helper.csproj", "{3AEE7003-A67B-4218-8040-A870E60C2F82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetWork", "NetWork\NetWork.csproj", "{48FAFB51-AB20-401F-969B-A7025342D932}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{76E5A027-A6FA-413E-9BF2-65CD87C3B2A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76E5A027-A6FA-413E-9BF2-65CD87C3B2A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76E5A027-A6FA-413E-9BF2-65CD87C3B2A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76E5A027-A6FA-413E-9BF2-65CD87C3B2A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D70638FB-0C4D-40B2-AE47-D6BFBC191354}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D70638FB-0C4D-40B2-AE47-D6BFBC191354}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D70638FB-0C4D-40B2-AE47-D6BFBC191354}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D70638FB-0C4D-40B2-AE47-D6BFBC191354}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A943F98-A469-4752-99CB-CECC0A3D4AE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A943F98-A469-4752-99CB-CECC0A3D4AE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A943F98-A469-4752-99CB-CECC0A3D4AE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A943F98-A469-4752-99CB-CECC0A3D4AE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AEE7003-A67B-4218-8040-A870E60C2F82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AEE7003-A67B-4218-8040-A870E60C2F82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AEE7003-A67B-4218-8040-A870E60C2F82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AEE7003-A67B-4218-8040-A870E60C2F82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48FAFB51-AB20-401F-969B-A7025342D932}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48FAFB51-AB20-401F-969B-A7025342D932}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48FAFB51-AB20-401F-969B-A7025342D932}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48FAFB51-AB20-401F-969B-A7025342D932}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3AEE7003-A67B-4218-8040-A870E60C2F82} = {E7420BF1-C734-4DA3-AE8D-8B2D5F78F4B5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3B8EC0CC-45BD-4B5C-8CF5-8CE964F94EAD}
+	EndGlobalSection
+EndGlobal
