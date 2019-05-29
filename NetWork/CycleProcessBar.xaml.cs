@@ -18,16 +18,29 @@ namespace NetWork
     /// <summary>
     /// SuspendedBall.xaml 的交互逻辑
     /// </summary>
-    public partial class SuspendedBall : UserControl
+    public partial class CycleProcessBar : UserControl
     {
-        public SuspendedBall()
+        public CycleProcessBar()
         {
             InitializeComponent();
+            Parent.Children.Add(useRatioPath);
+            Parent.Children.Add(noUseRatioPath);
+
         }
         public double CurrentValue1
         {
             set { SetValue(value); }
         }
+        public int Size { private get; set; }
+
+        private Path useRatioPath = new Path
+        {
+            StrokeThickness = 3,
+        };
+        private Path noUseRatioPath = new Path
+        {
+            StrokeThickness = 3,
+        };
 
         /// <summary>
         /// 设置百分百，输入小数，自动乘100
@@ -35,6 +48,7 @@ namespace NetWork
         /// <param name="percentValue"></param>
         private void SetValue(double percentValue)
         {
+
             /*****************************************
               方形矩阵边长为34，半长为17
               环形半径为14，所以距离边框3个像素
@@ -57,7 +71,7 @@ namespace NetWork
 
 
             //数字显示
-            lbValue.Content = (percentValue * 100).ToString("0") + "%";
+            //lbValue.Content = (percentValue * 100).ToString("0") + "%";
 
             /***********************************************
             * 整个环形进度条使用Path来绘制，采用三角函数来计算
@@ -66,6 +80,7 @@ namespace NetWork
 
             bool isLagreCircle = false; //是否优势弧，即大于180度的弧形
 
+            #region 计算终点
             //小于90度
             if (angel <= 90)
             {
@@ -141,6 +156,9 @@ namespace NetWork
                 endLeft = leftStart - 0.001; //不与起点在同一点，避免重叠绘制出非环形
                 endTop = topStart;
             }
+            #endregion
+
+            lbValue.Content = string.Format("{0:F2},{1:F2}", endLeft, endTop);
 
             Point arcEndPt = new Point(endLeft, endTop); //结束点
             Size arcSize = new Size(radius, radius);
@@ -157,7 +175,7 @@ namespace NetWork
             //路径描述
             PathFigure pathFigure = new PathFigure
             {
-                StartPoint = new Point(leftStart, angel < 180 ? topStart : 74), //起始地址
+                StartPoint = new Point(leftStart, angel < 180 ? topStart : 83), //起始地址
                 Segments = pathsegmentCollection
             };
 
@@ -185,6 +203,27 @@ namespace NetWork
             //达到100%则闭合整个
             //if (angel == 360)
             //    myCycleProcessBar1.Data = Geometry.Parse(myCycleProcessBar1.Data.ToString() + " z");
+        }
+
+        private void computeArcEnd()
+        {
+            Brush brush = new LinearGradientBrush(
+                new GradientStopCollection
+                {
+                    new GradientStop{
+                        Color =Color.FromArgb(0,0,0,0),
+                        Offset =0,
+                    },
+                    new GradientStop{
+                        Color =Color.FromArgb(0,0,0,0),
+                        Offset =0
+                    },
+                }
+                )
+            {
+                EndPoint = new Point(0.5, 1),
+                StartPoint = new Point(0.5, 0),
+            };
         }
     }
 }

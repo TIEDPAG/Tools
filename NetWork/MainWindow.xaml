@@ -46,7 +46,7 @@
             <ColumnDefinition Width="80"/>
         </Grid.ColumnDefinitions>
 
-        <local:SuspendedBall x:Name="circleProgressBar" Grid.RowSpan="2" MouseLeftButtonDown="DragMoveWindow"></local:SuspendedBall>
+        <local:CycleProcessBar x:Name="circleProgressBar" Grid.RowSpan="2" MouseLeftButtonDown="DragMoveWindow"></local:CycleProcessBar>
         <Button Name="btnStart" Grid.Column="1" Content="开始" Click="Button_Click"></Button>
     </Grid>
 </Window>

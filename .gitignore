@@ -2,15 +2,15 @@
 # 此 .gitignore 文件已由 Microsoft(R) Visual Studio 自动创建。
 ################################################################################
 
-/.vs/Tool/v16
-/Helper/bin/Debug
-/Helper/obj/Debug
-/NetWork/bin/Debug
-/NetWork/obj/Debug
+/Helper/bin
+/Helper/obj
+/NetWork/bin
+/NetWork/obj
 /packages
-/RedisTool/bin/Debug
-/RedisTool/obj/Debug
-/SqlTool/bin/Debug
-/SqlTool/obj/Debug
-/Tool/bin/Debug
-/Tool/obj/Debug
+/RedisTool/bin
+/RedisTool/obj
+/SqlTool/bin
+/SqlTool/obj
+/Tool/bin
+/Tool/obj
+/.vs

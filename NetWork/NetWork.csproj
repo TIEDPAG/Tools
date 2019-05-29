@@ -55,9 +55,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="SuspendedBall.xaml.cs">
-      <DependentUpon>SuspendedBall.xaml</DependentUpon>
+    <Compile Include="CycleProcessBar.xaml.cs">
+      <DependentUpon>CycleProcessBar.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\CycleProcessBarViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -70,7 +71,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="SuspendedBall.xaml">
+    <Page Include="CycleProcessBar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -105,5 +106,6 @@
   <ItemGroup>
     <Content Include="Test\svg.svg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
